@@ -3,106 +3,569 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Alex Chen - Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <!-- Navbar -->
-    <header>
-      <nav>
-        <div class="logo">K.S.Chandru</div>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+      <div class="theme-toggle-icon" id="themeIcon">🌙</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo">Alex Chen</a>
+
+        <!-- Desktop Navigation -->
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
-    </header>
 
-    <!-- Home Section -->
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Mobile Menu - Now inside nav-container -->
+        <div class="mobile-menu" id="mobileMenu">
+          <div class="mobile-menu-header">
+            <a href="#home" class="logo">Alex Chen</a>
+          </div>
+          <div class="mobile-menu-nav">
+            <ul>
+              <li>
+                <a href="#home"><span class="mobile-menu-icon">🏠</span>Home</a>
+              </li>
+              <li>
+                <a href="#about"
+                  ><span class="mobile-menu-icon">👨‍💻</span>About</a
+                >
+              </li>
+              <li>
+                <a href="#skills"
+                  ><span class="mobile-menu-icon">⚡</span>Skills</a
+                >
+              </li>
+              <li>
+                <a href="#education"
+                  ><span class="mobile-menu-icon">🎓</span>Education</a
+                >
+              </li>
+              <li>
+                <a href="#projects"
+                  ><span class="mobile-menu-icon">💼</span>Projects</a
+                >
+              </li>
+              <li>
+                <a href="#contact"
+                  ><span class="mobile-menu-icon">📧</span>Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-menu-footer">
+            <div class="mobile-social-links">
+              <a
+                href="https://github.com/alexchen"
+                target="_blank"
+                class="mobile-social-link"
+                title="GitHub"
+                >🐙</a
+              >
+              <a
+                href="https://linkedin.com/in/alexchen"
+                target="_blank"
+                class="mobile-social-link"
+                title="LinkedIn"
+                >💼</a
+              >
+              <a
+                href="https://twitter.com/alexchen"
+                target="_blank"
+                class="mobile-social-link"
+                title="Twitter"
+                >🐦</a
+              >
+              <a
+                href="mailto:alex.chen@email.com"
+                class="mobile-social-link"
+                title="Email"
+                >📧</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
     <section id="home" class="hero">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Developer & Systems Engineer</p>
-      <a href="#contact" class="btn">Get In Touch</a>
+      <div class="hero-content">
+        <div class="avatar" id="avatarCoin">
+          <div class="coin-face coin-front">
+            <div class="avatar-placeholder">AC</div>
+          </div>
+          <div class="coin-face coin-back">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-user avatar-svg"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+        </div>
+        <h1>Alex Chen</h1>
+        <p class="subtitle">Computer Science Graduate</p>
+        <p class="description">
+          Passionate about creating innovative solutions through clean,
+          efficient code and thoughtful design
+        </p>
+        <div class="cta-buttons">
+          <a href="#projects" class="cta-button primary">
+            <span>View My Work</span>
+            <span>→</span>
+          </a>
+          <a href="#contact" class="cta-button secondary">
+            <span>Get In Touch</span>
+            <span>✉</span>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
-    <section id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          As a passionate Developer and Systems Engineer, I specialize in
-          creating robust, scalable, and efficient applications using modern
-          technologies.
+    <section id="about" class="fade-in">
+      <div class="section-content-wrapper">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">
+          Get to know me better and discover what drives my passion for
+          technology
         </p>
-        <div class="tech-icons">
-          <i class="fab fa-react"></i>
-          <i class="fab fa-js-square"></i>
-          <i class="fab fa-node"></i>
-          <i class="fab fa-python"></i>
+        <div class="about-content">
+          <div class="about-image">
+            <div class="about-visual">
+              <span>💻</span>
+            </div>
+          </div>
+          <div class="about-text">
+            <p>
+              I'm a recent Computer Science graduate with a passion for
+              full-stack development and problem-solving. I love learning new
+              technologies and building projects that make a meaningful impact.
+            </p>
+            <p>
+              During my studies, I've worked on various projects ranging from
+              web applications to mobile apps, always focusing on clean code,
+              user experience, and modern development practices. I'm eager to
+              apply my skills in a professional environment and continue growing
+              as a developer.
+            </p>
+            <div class="skills">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="fade-in">
+      <div class="section-content-wrapper">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">
+          A comprehensive overview of my technical expertise and proficiency
+          levels
+        </p>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend Development</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress-bar" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">React</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress-bar" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">HTML/CSS</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress-bar" data-width="90"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend Development</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Node.js</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress-bar" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Python</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress-bar" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Java</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress-bar" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Tools & Technologies</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Git/GitHub</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress-bar" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">MongoDB</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress-bar" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">AWS</span>
+                <span class="skill-percentage">65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress-bar" data-width="65"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="fade-in">
+      <div class="section-content-wrapper">
+        <h2 class="section-title">Education Journey</h2>
+        <p class="section-subtitle">
+          My academic background and continuous learning path
+        </p>
+        <div class="education-timeline">
+          <div class="timeline-line"></div>
+
+          <div class="education-item">
+            <div class="timeline-dot"></div>
+            <div class="education-card">
+              <div class="education-date">2020 - 2024</div>
+              <div class="education-title">
+                Bachelor of Science in Computer Science
+              </div>
+              <div class="education-school">University of Technology</div>
+              <div class="education-description">
+                Graduated with honors (GPA: 3.8/4.0). Specialized in software
+                engineering and web development. Key coursework: Data Structures
+                & Algorithms, Software Engineering, Database Systems, Web
+                Development, Mobile App Development.
+              </div>
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="timeline-dot"></div>
+            <div class="education-card">
+              <div class="education-date">2023</div>
+              <div class="education-title">
+                Full Stack Web Development Bootcamp
+              </div>
+              <div class="education-school">TechBootcamp Online</div>
+              <div class="education-description">
+                Intensive 12-week program covering modern web technologies.
+                Built 5+ full-stack applications using React, Node.js, Express,
+                MongoDB. Learned deployment strategies and best practices.
+              </div>
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="timeline-dot"></div>
+            <div class="education-card">
+              <div class="education-date">2023</div>
+              <div class="education-title">
+                AWS Cloud Practitioner Certification
+              </div>
+              <div class="education-school">Amazon Web Services</div>
+              <div class="education-description">
+                Earned AWS Cloud Practitioner certification demonstrating
+                foundational knowledge of cloud computing and AWS services.
+                Learned about cloud architecture, security, and deployment.
+              </div>
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="timeline-dot"></div>
+            <div class="education-card">
+              <div class="education-date">2024</div>
+              <div class="education-title">Advanced React & Next.js Course</div>
+              <div class="education-school">Online Learning Platform</div>
+              <div class="education-description">
+                Completed advanced course in React ecosystem including Next.js,
+                TypeScript, and modern state management. Built several
+                production-ready applications with server-side rendering.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-      <div class="container">
-        <h2>My Projects</h2>
+    <section id="projects" class="fade-in">
+      <div class="section-content-wrapper">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          A showcase of my recent work and technical achievements
+        </p>
         <div class="projects-grid">
           <div class="project-card">
-            <h3>Project 1</h3>
-            <p>Details about Project 1.</p>
+            <h3>Task Management App</h3>
+            <p>
+              A full-stack web application for managing tasks and projects with
+              user authentication, real-time updates, and responsive design
+              built with React and Node.js.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
           </div>
           <div class="project-card">
-            <h3>Project 2</h3>
-            <p>Details about Project 2.</p>
+            <h3>Weather Dashboard</h3>
+            <p>
+              Interactive weather application with location-based forecasts,
+              data visualization, and local storage functionality using
+              JavaScript and weather APIs.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
           </div>
           <div class="project-card">
-            <h3>Project 3</h3>
-            <p>Details about Project 3.</p>
+            <h3>E-commerce Website</h3>
+            <p>
+              Responsive e-commerce platform with shopping cart functionality,
+              product filtering, and payment integration built as a team project
+              during bootcamp.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Personal Finance Tracker</h3>
+            <p>
+              Mobile-responsive web app for tracking expenses and income with
+              data visualization using Chart.js and local storage for data
+              persistence.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <p>Feel free to get in touch for collaborations or inquiries.</p>
-        <form>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
-      <div class="social-links">
-        <a href="https://linkedin.com" target="_blank" class="social-icon"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a href="https://github.com" target="_blank" class="social-icon"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a href="https://twitter.com" target="_blank" class="social-icon"
-          ><i class="fab fa-twitter"></i
-        ></a>
+    <section id="contact" class="fade-in">
+      <div class="section-content-wrapper">
+        <div class="contact-section">
+          <div class="contact-intro">
+            <h2>Let's Connect</h2>
+            <p>
+              I'm actively looking for new opportunities and would love to hear
+              from you! Whether you have a project in mind, want to discuss
+              potential collaborations, or just want to connect, I'm always open
+              to meaningful conversations.
+            </p>
+          </div>
+
+          <div class="contact-container">
+            <div class="contact-info">
+              <h3>Get In Touch</h3>
+
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <p>
+                    <a href="mailto:alex.chen@email.com">alex.chen@email.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div class="contact-details">
+                  <h4>Phone</h4>
+                  <p><a href="tel:+1234567890">+1 (234) 567-8900</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-details">
+                  <h4>Location</h4>
+                  <p>San Francisco, CA</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">💼</div>
+                <div class="contact-details">
+                  <h4>LinkedIn</h4>
+                  <p>
+                    <a href="https://linkedin.com/in/alexchen" target="_blank"
+                      >linkedin.com/in/alexchen</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <a
+                  href="https://github.com/alexchen"
+                  target="_blank"
+                  class="social-link"
+                  title="GitHub"
+                  >🐙</a
+                >
+                <a
+                  href="https://linkedin.com/in/alexchen"
+                  target="_blank"
+                  class="social-link"
+                  title="LinkedIn"
+                  >💼</a
+                >
+                <a
+                  href="https://twitter.com/alexchen"
+                  target="_blank"
+                  class="social-link"
+                  title="Twitter"
+                  >🐦</a
+                >
+                <a
+                  href="mailto:alex.chen@email.com"
+                  class="social-link"
+                  title="Email"
+                  >📧</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-form-container">
+              <h3>Send a Message</h3>
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your full name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="your.email@example.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="What's this about?"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Tell me about your project or just say hello!"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <footer>
-      <p>© 2025 K.S.Chandru All Rights Reserved.</p>
-    </footer>
     <script src="script.js"></script>
   </body>
 </html>
