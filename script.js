@@ -5,6 +5,10 @@ const body = document.body;
 
 // Check for saved theme preference or default to light mode
 const currentTheme = localStorage.getItem("theme") || "light";
+// const currentTheme = localStorage.getItem("theme") || "light";
+body.setAttribute("data-theme", currentTheme);
+updateThemeIcon(currentTheme); // <- this includes updateSocialIcons
+
 body.setAttribute("data-theme", currentTheme);
 updateThemeIcon(currentTheme);
 
@@ -19,6 +23,27 @@ themeToggle.addEventListener("click", () => {
 
 function updateThemeIcon(theme) {
   themeIcon.textContent = theme === "dark" ? "☀️" : "🌙";
+  updateSocialIcons(theme);
+}
+
+function updateSocialIcons(theme) {
+  const icons = document.querySelectorAll(
+    ".social-link img, .mobile-social-link img"
+  );
+
+  icons.forEach((img) => {
+    const baseIcon = img.getAttribute("data-icon");
+    if (!baseIcon) {
+      console.warn("Missing data-icon for:", img);
+      return;
+    }
+    const newSrc =
+      theme === "dark"
+        ? `/assets/${baseIcon}.svg`
+        : `/assets/${baseIcon}-lite.svg`;
+
+    img.setAttribute("src", newSrc);
+  });
 }
 
 // Enhanced Mobile Menu Functionality
