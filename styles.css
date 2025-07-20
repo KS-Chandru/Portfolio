@@ -940,7 +940,7 @@ section {
 
 .timeline-dot {
   position: absolute;
-  left: 22px;
+  left: 23px;
   top: 20px;
   width: 16px;
   height: 16px;
@@ -1230,7 +1230,7 @@ section {
   color: var(--text-primary);
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 
 .contact-form {
@@ -1465,11 +1465,11 @@ section {
   }
 
   .timeline-line {
-    left: 25px;
+    left: 30px;
   }
 
   .timeline-dot {
-    left: 17px;
+    left: 3px;
   }
 }
 
@@ -1624,11 +1624,11 @@ section {
   }
 
   .timeline-line {
-    left: 20px;
+    left: 30px;
   }
 
   .timeline-dot {
-    left: 12px;
+    left: 9px;
     width: 14px;
     height: 14px;
   }
@@ -1715,6 +1715,16 @@ section {
   .mobile-menu {
     width: 250px;
     right: 10px;
+  }
+
+  .timeline-line {
+    left: 30px;
+  }
+
+  .timeline-dot {
+    left: 9px;
+    width: 14px;
+    height: 14px;
   }
 }
 
